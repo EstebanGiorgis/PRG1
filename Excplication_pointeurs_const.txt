@@ -1,0 +1,5 @@
+const int* ptr = ...; -> le "const" du début indique simplement que le pointeur "ptr" attends une adresse mémoire d'une constante et pas d'une variable, mais par contre ça ne veut pas dire que le pointeur "ptr" est une constante, on peut l'initialiser a d'autre adresse mémoire de constante. Mais donc étant donnée qu'il contient des adresse de constante il est impossible, avec le déréférencement (*ptr = ...), de modifier la valeur de la constante à laquelle il référence puis-ce que c'est une constante.
+
+
+int* const ptr = ...; -> la c'est l'inverse le pointeur "ptr" attends une adresse mémoire d'une variable et pas d'une constante. Donc impossible d'initialiser au pointeur "ptr" une autre adresse que la première, mais par contre vu que qu'il référence une variable et pas une constante il peut modifier, avec le déréférencement, la valeure de ça varible a laquelle il référence.
+
