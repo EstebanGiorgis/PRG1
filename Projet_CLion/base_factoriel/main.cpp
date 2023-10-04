@@ -17,8 +17,6 @@ string base_conversion(int base, int valeur){
         reste = valeur % variable_incrementation;
 
 
-
-
         //condition pour trnasformer le reste en caractère hexa
         if(reste >= 10){
             rep += reste + 55;
@@ -30,7 +28,7 @@ string base_conversion(int base, int valeur){
         variable_incrementation++;
     }
 
-
+ 
 
     string copie_de_rep = rep;
     for(int i = 0; i < rep.size(); i++){
@@ -43,7 +41,7 @@ string base_conversion(int base, int valeur){
 
 int main() {
     base = 16;
-    valeur_de_base = 277;
+    valeur_de_base = 120;
     cout << base_conversion(base, valeur_de_base);
 
     return 0;

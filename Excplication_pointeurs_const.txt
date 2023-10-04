@@ -3,3 +3,18 @@ const int* ptr = ...; -> le "const" du début indique simplement que le pointeur
 
 int* const ptr = ...; -> la c'est l'inverse le pointeur "ptr" attends une adresse mémoire d'une variable et pas d'une constante. Donc impossible d'initialiser au pointeur "ptr" une autre adresse que la première, mais par contre vu que qu'il référence une variable et pas une constante il peut modifier, avec le déréférencement, la valeure de ça varible a laquelle il référence.
 
+
+
+Référence:
+int x = 1;
+int& y = x;
+
+La en gros ce que tu fais c'est que tu vas faire que x et y pointe sur la meme adresse mémoire 
+donc si tu modifie x ou y ça modifiera la valeur de la même mémoire donc si plus tard dans ton
+code tu y=4 et qu'ensuite tu cout x ou bien y ça te retournera 4 même si au début x = 1, pcq 
+ta référencé au même emplacement mémoire, (en gros mtn ta deux portes pour un chambre)
+
+
+Un truc simple a comprendre quand tu fais une appel de fonction avec comme parametre des référence, int& nom_fonction(int& a, int& b){} -> ça veut simplent dire que quand tu appeleras la fonction il faudras que tu mettes une lvalue(donc une variable) de type int et pas une valeur int brute comme 23 par exemple 
+
+
